@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         networkManager.fetchFoodList(for: "Helsinki")
         networkManager.fetchFoodList(for: "Beijing")
         networkManager.fetchFoodList(for: "Paris")
-        
     }
     
     private func hardcodeTopBanners() {

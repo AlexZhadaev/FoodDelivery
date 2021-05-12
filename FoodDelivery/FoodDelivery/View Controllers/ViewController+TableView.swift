@@ -72,5 +72,5 @@ extension ViewController: UITableViewDelegate {
             })
         }
     }
-    
+
 }

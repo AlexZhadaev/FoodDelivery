@@ -18,7 +18,7 @@ extension ViewController: UITableViewDataSource {
         } else {
             foodDictionary[foodKey] = [foodItem]
         }
-        self.foodSectionAndCategoryBanners = [String](foodDictionary.keys).sorted()
+        foodSectionAndCategoryBanners = [String](foodDictionary.keys).sorted()
         
     }
     
@@ -73,4 +73,14 @@ extension ViewController: UITableViewDelegate {
         }
     }
 
+    func scrollToSection(_ scrollView: UIScrollView, section: String) {
+        var indexPath = IndexPath(row: 0, section: 0)
+//        for item in 0..<foodSectionAndCategoryBanners.count {
+//            if section == foodSectionAndCategoryBanners[indexPath.section] {
+//                indexPath = IndexPath(row: 1, section: item)
+//                foodTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+//            }
+//        }
+        self.foodTableView?.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
 }

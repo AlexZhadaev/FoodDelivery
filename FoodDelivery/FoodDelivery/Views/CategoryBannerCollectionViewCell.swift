@@ -9,6 +9,8 @@ import UIKit
 
 class CategoryBannerCollectionViewCell: UICollectionViewCell {
     
+    let view = ViewController.shared
+    
     @IBOutlet weak var categoryBannerName: UIButton!
     
     func configure(for categoryBanner: String) {
@@ -18,17 +20,8 @@ class CategoryBannerCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func categoryBannerTapped(_ sender: UIButton) {
-//        let view = ViewController()
-//        guard let section = self.categoryBannerName.currentTitle else { return }
-//
-//        var indexPath = IndexPath()
-//        for item in 0..<view.foodSectionAndCategoryBanners.count {
-//            if section == view.foodTableView.headerView(forSection: item)?.textLabel?.text {
-//                indexPath = IndexPath(row: 0, section: item)
-//            }
-//        }
-//        view.foodTableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        
+        guard let section = self.categoryBannerName.currentTitle else { return }
+//        view.scrollToSection(view.foodTableView, section: section)
     }
     
 }

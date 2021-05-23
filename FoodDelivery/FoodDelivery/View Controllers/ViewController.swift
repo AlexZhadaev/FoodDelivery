@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    static let shared = ViewController()
     var networkManager = FoodNetworkManager()
     var topBanners: [UIImage] = []
     var food: [Food] = []

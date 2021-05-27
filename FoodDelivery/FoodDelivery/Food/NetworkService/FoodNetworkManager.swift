@@ -18,7 +18,9 @@ class FoodNetworkManager {
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let food = self.parseJSON(withData: data) {
-                    self.onCompletion?(food)
+                    DispatchQueue.main.async {
+                        self.onCompletion?(food)
+                    }
                 }
             }
         }
